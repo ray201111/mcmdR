@@ -1,0 +1,10 @@
+Package: mcmdR
+Type: Package
+Title: mcmdR
+Version: 1.0
+Date: 2014-09-14
+Author: Takafumi Sasao
+Maintainer: Takafumi Sasao <yourfault@somewhere.net>
+Description: Use MCMD and get result or output result to a file.
+License: BSD
+Depends: data.table

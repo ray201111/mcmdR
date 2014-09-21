@@ -1,0 +1,16 @@
+{
+    "contents" : "import(data.table)\nexportPattern(mcmd.set_mcmd_path,mcmd.get_mcmd_path,mcmd.exec_command)\n",
+    "created" : 1411297093257.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3049412649",
+    "id" : "8B9CDED0",
+    "lastKnownWriteTime" : 1410705787,
+    "path" : "~/PKG/mcmd/NAMESPACE",
+    "project_path" : "NAMESPACE",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_namespace"
+}

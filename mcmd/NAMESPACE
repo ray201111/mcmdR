@@ -1,0 +1,2 @@
+import(data.table)
+exportPattern(mcmd.set_mcmd_path,mcmd.get_mcmd_path,mcmd.exec_command)

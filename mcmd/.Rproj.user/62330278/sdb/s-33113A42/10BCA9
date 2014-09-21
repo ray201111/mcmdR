@@ -1,0 +1,17 @@
+{
+    "contents" : "# mcmd.set_mcmd_path(\"/usr/tool/mcmd/bin/\")\r\nres <- mcmd.exec_command(c(\"cat /fio/home/sasao_takafumi/csv/test.csv |\"\r\n                           ,\"mchgstr f=pf_id c=99:a -sub |\"\r\n                          ,\"msortf f=pf_id%r\"))\r\nhead(res)\r\n\r\n# a<-c(\"cat /fio/home/sasao_takafumi/csv/test.csv |\"\r\n#      ,\"msortf f=pf_id%r\")\r\n# paste(a, sep=\"\",collapse=\" \")\r\n\r\nmcmd.exec_command <- function(string_command, out_file = \"\"){\r\n  \r\n  # out_fileに入力があれば、ファイル出力モード\r\n  is_output_mode <- !(out_file == \"\")\r\n  \r\n  # ファイル出力モードのときは、出力先フォルダを作成\r\n  if(is_output_mode){    \r\n    .Mcmd.CreateDirIfNotExist(dirname(out_file))    \r\n  }\r\n  \r\n  string_command <- paste(string_command, sep=\"\", collapse=\" \")\r\n  \r\n  # 実行するコマンド生成\r\n  if(is_output_mode){\r\n    string_command <- paste0(\"PATH=\\\"$PATH:\", .mcmd_path, \"\\\"\r\n                             \",string_command, \" > \", out_file)\r\n  }else{\r\n    # 改行を空白に置き換え\r\n#     string_command <- gsub(\"\\n\", \" \", string_command)\r\n    string_command <- paste0(\"PATH=\\\"$PATH:\", .mcmd_path, \"\\\" \",string_command)\r\n    print(string_command)\r\n  }\r\n  \r\n  e <- try({\r\n    # ファイル出力モードの時はNULLを、そうでないときは結果を返す\r\n    if(is_output_mode){\r\n      res <- system(string_command)\r\n      return(res == 0)\r\n    }else{\r\n      result_data <- fread(string_command)\r\n      \r\n      return(result_data)      \r\n    }\r\n  })\r\n  \r\n  if (class(e) == \"try-error\") {\r\n    return(F)\r\n  }   \r\n}\r\n\r\n\r\n",
+    "created" : 1410914107369.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "108494738",
+    "id" : "10BCA9",
+    "lastKnownWriteTime" : 83952648,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

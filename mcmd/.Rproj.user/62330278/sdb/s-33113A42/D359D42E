@@ -1,0 +1,16 @@
+{
+    "contents" : "Package: mcmdR\nType: Package\nTitle: mcmdR\nVersion: 1.0\nDate: 2014-09-14\nAuthor: Takafumi Sasao\nMaintainer: Takafumi Sasao <yourfault@somewhere.net>\nDescription: Use MCMD and get result or output result to a file.\nLicense: BSD\nDepends: data.table",
+    "created" : 1411297091147.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "327236382",
+    "id" : "D359D42E",
+    "lastKnownWriteTime" : 1411296175,
+    "path" : "~/PKG/mcmd/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "dcf"
+}
