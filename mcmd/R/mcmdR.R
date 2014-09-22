@@ -35,7 +35,7 @@ mcmd.exec_command <- function(string_command, out_file = ""){
     string_command <- paste0("PATH=\"$PATH:", .mcmd_path, "\"
                              ",string_command, " > ", out_file)
   }else{
-    # 改行を空白に置き換え
+    # 
     string_command <- paste0("PATH=\"$PATH:", .mcmd_path, "\" ",string_command)
   }
   
